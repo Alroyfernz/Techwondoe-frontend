@@ -1,0 +1,55 @@
+.LoginContainer{
+    background: rgba(0, 0, 0, 0.75);
+    width: 25%;
+    border-radius: 6px;
+    z-index: 10;
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+  padding: 25px 15px;
+  margin-top: 2%;
+    justify-content: center;
+    flex-direction: column;
+}
+.LoginTitle{
+    margin: 10px 0;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.InputContainer{
+    background-color: #fff;
+   
+    border-radius: 4px;
+    padding: 15px;
+    margin: 8px 0;
+    font-size: 14px;
+    border: unset;
+    display: flex;
+    flex-direction: column;
+
+}
+.InputContainer:focus{
+    outline: none;
+}
+.LoginWrapper{
+    width: 80%;
+   
+}
+.LoginForm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.SubmitButton{
+    width: 100%;
+    background-color: red;
+    color:#fff;
+    border: unset;
+    border-radius: 5px;
+    margin-top: 12px;
+    font-size: 17px;
+    padding: 15px;
+}

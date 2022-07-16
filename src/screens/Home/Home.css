@@ -1,0 +1,98 @@
+.HomeContainer{
+width: 100%;
+display: flex;
+align-items: center;
+z-index: 10;
+height: 70%;
+flex-direction: column;
+font-family: 'Poppins', sans-serif;
+
+}
+
+.HomeTitle{
+    font-size: 2.8rem;
+    color: #fff;
+}
+
+.TopSection{
+    margin-top: 2%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+   
+}
+.SearchBox{
+    width: 80%;
+    background-color: #fff;
+border-radius: 40px;
+padding: 10px;
+}
+
+.SearchInput{
+    width: 90%;
+    border: unset;
+    font-size: 14px;
+}
+
+.SearchInput:focus{
+    outline: none;
+}
+
+
+.AddShow{
+    background-color: red;
+    border: unset;
+    color:#fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.movieWrapper{
+    margin-top: 2%;
+    width: 40%;
+}
+.NullMovie{
+    color:#fff;
+    font-size: 2rem;
+}
+.movieComp{
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin-top: 3.5%;
+    /* justify-content: space-around; */
+    background-color: #fff;
+}
+
+.movieComp>.LeftContainer{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.movieComp>.RightContainer{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.RightContainer>.EditButton,.DeleteButton{
+background-color: gainsboro;
+padding: 5px 8px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+}
+
+
+.DeleteButton{
+    background-color: red;
+    color: #fff;
+    font-weight: 500;
+}
+
