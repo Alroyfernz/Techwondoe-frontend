@@ -96,3 +96,33 @@ align-items: center;
     font-weight: 500;
 }
 
+
+
+@media screen and (max-width:768px) {
+    .TopSection{
+        width: 90%;
+    }
+    .AddShow{
+        padding: 6px;
+    }
+    .HomeTitle{
+        font-size: 1.75rem;
+    }
+    .movieWrapper{
+        width: 90%;
+    }
+    .movieComp{
+        flex-direction: column;
+        padding:0;
+
+    }
+    .LeftContainer,.RightContainer{
+        width: 100% !important;
+        padding: 5px;
+        flex-wrap: wrap;
+    }
+    .LeftContainer{
+        padding: 7px;
+        border-bottom: 0.7px solid black;
+    }
+}

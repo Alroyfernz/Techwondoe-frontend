@@ -53,3 +53,12 @@
     font-size: 17px;
     padding: 15px;
 }
+
+@media screen and (max-width:560px) {
+    .LoginContainer{
+        width: 90%;
+    }
+    .LoginTitle{
+        font-size: 1.5rem;
+    }
+}

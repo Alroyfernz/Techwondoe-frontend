@@ -37,34 +37,45 @@ let toast=useToast();
       return};
     setIsLoading(true);
 try {
-    const res=await(await fetch(`${cred.apiUrl}/user/login`,{
+    const res=(await fetch(`${cred.apiUrl}/user/login`,{
         method:"POST",
         headers: {'Content-Type': 'application/json'},
         body:JSON.stringify(userInfo)
-    })).json();
+    }))
     console.log(res);
-   localStorage.setItem('UserData',res.data._id);
-   localStorage.setItem('Token',res.token);
-    toast({
-      title: 'Login succesfull.',
-      status: 'success',
-      duration: 3000,
-      isClosable: true,
-    })
+    const data=await res.json();
+    console.log(data);
+    if( res.status>400){
+      console.log(data);
+      
+      toast({
+        title: `${data.messgae}`,
+        status:  "error",
+        duration: 3000,
+        isClosable: true,
+      })
+    }else{
+     
+      toast({
+        title: 'Login succesfull.',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      })
+      localStorage.setItem('UserData',data.data._id);
+   localStorage.setItem('Token',data.token);
+    }
+   
+   
     navigate("/home", { replace: true });
     setIsLoading(false);
 
 
 } catch (error:any) {
  
-  toast({
-    title: `${error.message}`,
-    status:  "error",
-    duration: 3000,
-    isClosable: true,
-  })
+ 
     console.log(error);
-    setIsLoading(true);
+    setIsLoading(false);
 
 }
    }
