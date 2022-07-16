@@ -52,7 +52,12 @@ padding: 10px;
 .movieWrapper{
     margin-top: 2%;
     width: 40%;
+    max-height: 60vh;
+    overflow-y: scroll;
 }
+.movieWrapper::-webkit-scrollbar {
+    display: none;
+  }
 .NullMovie{
     color:#fff;
     font-size: 2rem;

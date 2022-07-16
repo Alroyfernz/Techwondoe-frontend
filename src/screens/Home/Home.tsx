@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDisclosure, Spinner } from "@chakra-ui/react";
-import { MdDelete, MdEdit } from "react-icons/md";
 import "./Home.css";
 import { cred } from "../../Cred";
 import ModalComp from "../../components/Modal/ModalComp";
 import IMovie from "../../Interfaces/IMovie";
 import { getHeader } from "../../Util/header";
+import MovieComp from "../../components/Movie/MovieComp";
 
 const initMovie = {
   Title: "",
@@ -130,36 +130,10 @@ const Home = () => {
       </div>
       <div className="movieWrapper">
         {!isLoading ? (
-          userData?.MovieList.length !== 0 ? (
+        userData?.MovieList.length !== 0 ? (
             userData?.MovieList?.map((movie:IMovie, idx: number) => {
               return (
-                <div className="movieComp" key={idx}>
-                  <div className="LeftContainer">
-                    <span>Name: {movie.Title}</span>
-                    <span>App: {movie.StreamingApp}</span>
-                    <span>Rating: {movie.Rating}</span>
-                  </div>
-                  <div className="RightContainer">
-                    <button
-                      className="EditButton"
-                      onClick={() => {
-                        setIsEdit(true);
-                        setMovieData(movie);
-                        onOpen();
-                      }}
-                    >
-                      Edit <MdEdit />
-                    </button>
-                    <button
-                      className="DeleteButton"
-                      onClick={() => {
-                        handleDelete(movie?._id);
-                      }}
-                    >
-                      Delete <MdDelete />
-                    </button>
-                  </div>
-                </div>
+               <MovieComp movie={movie} onOpen={onOpen} setIsEdit={setIsEdit} setMovieData={setMovieData} handleDelete={handleDelete}/>
               );
             })
           ) : (
