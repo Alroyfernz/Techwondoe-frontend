@@ -108,6 +108,9 @@ align-items: center;
     .HomeTitle{
         font-size: 1.75rem;
     }
+    .NullMovie{
+        font-size: 1.2rem;
+    }
     .movieWrapper{
         width: 90%;
     }
